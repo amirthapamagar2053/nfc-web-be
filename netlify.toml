@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  functions = "dist/functions"
+  publish = "public"  # (Optional) If you have static files
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
